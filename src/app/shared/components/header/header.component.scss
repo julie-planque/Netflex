@@ -1,0 +1,23 @@
+header {
+    background-color: #0C0C0C;
+    .container {
+        display: flex;
+        justify-content: start;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding-right: 80px;
+        align-items: center;
+
+        .primary-title {
+            font-family: 'Orbitron-bold';
+            font-size: 2.5rem;
+            padding: 0 30px;
+            color: #ffffff;
+            text-transform: uppercase;
+        }
+
+        .yellow-font {
+            color: #ffcf00;
+        }
+    }
+}
