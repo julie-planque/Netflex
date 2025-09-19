@@ -1,0 +1,6 @@
+<ul>
+    @for (movie of movies(); track $index) {
+        <li><app-movie [movie]="movie"></app-movie></li>
+    }
+</ul>
+
