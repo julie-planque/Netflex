@@ -1,0 +1,7 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;  /* centre toutes les cards dans la ligne */
+    gap: 1rem;
+    padding: 2rem;
+}

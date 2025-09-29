@@ -11,6 +11,13 @@
     font-weight: 700;
     font-style: normal;
 }
+
+@font-face {
+    font-family: 'Orbitron-regular';
+    src: url('/fonts/Orbitron-Regular.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
 body {
     margin: 0;
     background-color: #0C0C0C;

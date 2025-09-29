@@ -1,0 +1,77 @@
+.card {
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    width: 370px;
+
+    .top {
+        justify-content: space-between;
+        width: auto;
+        height: 400px;
+        display: flex;
+        padding: 10px;
+
+        button.delete-favoris, button.add-favoris {
+            background-color: #00000096;
+            border: none;
+            cursor: pointer;
+            width: 50px;
+            height: 50px;
+            border-radius: 10%;
+        }
+        button.delete-favoris {
+            color: #DC2828;
+        }
+        button.add-favoris {
+            color: #ffffff;
+        }
+        .rating {
+            background-color: #00000096;
+            color: #FACC15;
+            height: 50px;
+            padding: 0 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10%;
+            font-weight: 600;
+
+            p {
+                color: #ffffff;
+            }
+        }
+    }
+    
+
+    .bottom {
+        background-color: #24282F;
+        padding: 1rem;
+        height: 200px;
+        contain: content;
+        word-wrap: break-word;
+        h3 {
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+        a {
+            color: #ffffff;
+        }
+
+        .info {
+            display: flex;
+            justify-content: space-between;
+
+        }
+        .description {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            height: 58px;
+        }
+    }
+
+}

@@ -1,11 +1,30 @@
-<div class="card">
-    <div class="top">
-        <button>Favoris</button>
-        <img [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path" alt="movie.title">
-        <p>{{ movie.vote_average }}</p>
+<article class="card">
+    <div class="top"
+    [style.background-image]="'url(https://image.tmdb.org/t/p/w500' + movie.poster_path + ')'"
+    [style.background-size]="'cover'"
+    [style.background-position]="'center'">
+    <div class="rating">
+    <fa-icon [icon]="faStar" aria-hidden="true"></fa-icon>
+    <p aria-label="Note du film : {{ movie.vote_average | number: '1.1-1' }}">{{ movie.vote_average | number: '1.1-1'}}</p>
+</div>
+@if (favorite) {
+    <button (click)="addToFavorites()" aria-label="Supprimer des favoris" class="delete-favoris">
+        <fa-icon aria-hidden="true" [icon]="faHeart" size="lg"></fa-icon>
+    </button>
+}
+@if (!favorite) {
+    <button (click)="addToFavorites()" aria-label="Ajouter au favoris" class="add-favoris">
+        <fa-icon aria-hidden="true" [icon]="faHeartRegular" size="lg"></fa-icon>
+    </button>
+}
     </div>
     <div class="bottom">
-        <p>{{ movie.title }}</p> <p>{{ movie.release_date }}</p>
-        <p>{{ movie.overview }}</p>
+        <div class="info">
+            <p>{{ movie.genreNames }}</p>
+            <p>{{ movie.release_date | date: 'yyyy' }}</p>
+        </div>
+        <h3>{{ movie.title }}</h3> 
+        <p class="description">{{ movie.overview }}</p>
+        <a href="/movie/{{ movie.id }}">Voir le film</a>
     </div>
-</div>
+</article>

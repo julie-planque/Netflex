@@ -1,6 +1,37 @@
 .genre-menu {
-    padding: 1rem 0;
-    background-color: #1E1E1E;
-    height: 300px;
+    display: flex;
+    gap: 7rem;
+    list-style: none;
+    padding: 65px 0;
+    margin: 0;
+    justify-content: center;
 }
 
+.navbar-genre {
+    padding: 2.5rem 0;
+    background-color: #25211e;
+}
+.btn-genre {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+.btn-genre:hover {
+    span {
+        color: #ffcf00;
+    }
+}
+li button {
+    display: flex;
+    font-family: sans-serif;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.5rem;
+    color: #e0e0e0;
+    font-weight: 700;
+}
+.theme {
+    color: #ffcf00;
+    font-weight: 700;
+}
